@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const express = require("express");
 const ejs = require("ejs");
 
-
 // set up express app
 const app = express();
 
