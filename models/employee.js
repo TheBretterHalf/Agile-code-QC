@@ -7,7 +7,13 @@ const Schema = mongoose.Schema;
 const EmployeeSchema = new Schema({
     name: {
         type: String,
-        required: [true, "Name field is required"]
+    },
+    clockin: {
+        type: Number,
+        required: [true, "Error"]
+    },
+    clockout: {
+        type: Number
     }
     // ,
     // time: {

@@ -33,3 +33,15 @@ app.get("/", function(req, res) {
 app.listen(process.env.PORT, process.env.IP, function() {
     console.log("Now listening for requests");
 });
+
+
+function startTime(){
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var d = today.getDay();
+    var total =h + m/60 + s/3600;
+    
+}
+startTime.total=document.getElementById('hoursworked').value;
