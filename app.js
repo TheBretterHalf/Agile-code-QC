@@ -28,11 +28,16 @@ app.get("/", function(req, res) {
     res.render("landing");
 });
 
+app.post("/employees", function(req, res){
+    
+})
+
 
 // listen for requests
 app.listen(process.env.PORT, process.env.IP, function() {
     console.log("Now listening for requests");
 });
+
 
 
 function startTime(){
@@ -42,6 +47,4 @@ function startTime(){
     var s = today.getSeconds();
     var d = today.getDay();
     var total =h + m/60 + s/3600;
-    
 }
-startTime.total=document.getElementById('hoursworked').value;
