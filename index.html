@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,7 +35,9 @@
   </div>
 </nav>
 
+
 <div class="center">
+<<<<<<< HEAD
 <h1>ABC Company</h1> 
 
 <input type="text" id="employeeid" placeholder="Employee ID" value="">
@@ -47,7 +50,47 @@
       </div> 
         <script src="app.js"></script>
         
+=======
+<h1>ABC Company</h1>
+
+<!--<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">-->
+<!--Name: <input type="text" name="fname">-->
+<!--<input type="submit" value="Submit">-->
+<!--</form>-->
+
+<form name="empIdForm" form action="/successpage" method="post">
+<input type="text" placeholder="Employee ID" name="empid" required><br>
+
+<input type="submit" onclick="clockInAlert()" id="clockIn" value="Clock In">
+<input type="submit" onclick="clockOutAlert()" id="clockOut" value="Clock Out">
+       </form>
+       </div> 
+       
+>>>>>>> upstream/master
     </body>
     
+    <script>
+  function clockInAlert() {
+      var x = document.forms["empIdForm"]["empid"].value;
+  if (x == "") {
+    alert("Employee ID must be filled in");
+    return false;
+  }
+  else {
+    alert("You have succesfully clocked in!");
+  }
+}
+  function clockOutAlert() {
+      var x = document.forms["empIdForm"]["empid"].value;
+  if (x == "") {
+    alert("Employee ID must be filled in.");
+    return false;
+  }
+  else {
+    alert("You have succesfully clocked out!");
+  }
+}
+</script>
+
     
 </html>
