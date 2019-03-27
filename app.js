@@ -6,7 +6,7 @@ const ejs = require("ejs");
 const app = express();
 
 // connect to mongodb
-mongoose.connect("mongodb://localhost/employees", {useNewUrlParser:true});
+mongoose.connect("mongodb://localhost/employees", { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 
 // To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.
@@ -24,11 +24,19 @@ app.use(bodyParser.json());
 app.use("/agile", require("./routes/employees"));
 
 // Home page
+<<<<<<< HEAD
 app.get("/api", (req, res)=>{
     res.send("this is a response from homebase");
 })
 
 app.post("/api", (req, res)=>{
+=======
+app.get("/api", (req, res) => {
+    res.send("this is a response from homebase");
+})
+
+app.post("/api", (req, res) => {
+>>>>>>> upstream/master
     res.send(req.body);
 })
 
@@ -40,11 +48,19 @@ app.listen(process.env.PORT, process.env.IP, function() {
 
 
 
+<<<<<<< HEAD
 function startTime(){
+=======
+function startTime() {
+>>>>>>> upstream/master
     var today = new Date();
     var h = today.getHours();
     var m = today.getMinutes();
     var s = today.getSeconds();
     var d = today.getDay();
+<<<<<<< HEAD
     var total =h + m/60 + s/3600;
+=======
+    var total = h + m / 60 + s / 3600;
+>>>>>>> upstream/master
 }

@@ -6,15 +6,21 @@ const Schema = mongoose.Schema;
 // create user Schema & model
 const EmployeeSchema = new Schema({
    name: {
-       type: String,
+      type: String,
    },
    clockin: {
-       type: Number,
-       required: [true, "Error"]
+      type: Number,
+      required: [true, "Error"]
    },
    clockout: {
-       type: Number
-   }});
+      type: Number
+   }
+});
 
 
 const Employee = mongoose.model("employee", EmployeeSchema);
+<<<<<<< HEAD
+=======
+
+module.exports = Employee;
+>>>>>>> upstream/master
