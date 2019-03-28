@@ -43,6 +43,17 @@
     };
     xhttp.send(JSON.stringify(data));
   }
+  function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var d = today.getDay();
+    var tot = h + m / 60 + s / 3600;
+    var total = Math.floor(tot)
+    document.getElementById("totaltime").innerHTML=total
+}
+
 </script>
 
 <body>
@@ -80,7 +91,8 @@
     <input id="employeeName" type="text" />
     <button onclick="makePOSTRequest()">Post Request</button>
     <p id="postResponse"></p>
-
+    <button onclick="startTime()">Current Hours</button>
+    <p id="totaltime"></p>
 </body>
 
 </html>
