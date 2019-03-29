@@ -49,6 +49,7 @@
     var h = today.getHours();
     var m = today.getMinutes();
     var s = today.getSeconds();
+
     var day = today.getDay();
     if (day==0){
         var d="Sunday"
@@ -74,6 +75,15 @@
     var total = d +","+ h +":"+ m + ":" + s;
     document.getElementById("totaltime").innerHTML=total
 }
+
+    var d = today.getDay();
+    var tot = h + m / 60 + s / 3600;
+    var total = Math.floor(tot)
+    document.getElementById("totaltime").innerHTML=total
+}
+
+</script>
+
 
 </script>
 <body>
@@ -105,24 +115,18 @@
   <div class="center">
     <h1>ABC Company</h1>
 
-<<<<<<< HEAD
+
     <button onclick="makeGETRequest();">Get Request</button>
     <p id="getResponse"></p>
     <p>Employee Name</p>
     <input id="employeeName" type="text" />
     <button onclick="makePOSTRequest()">Post Request</button>
     <p id="postResponse"></p>
+
     <button onclick="startTime()">Current Time</button>
     <p id="totaltime"></p>
-=======
-        <button onclick="makeGETRequest();">Get Request</button>
-        <p id="getResponse"></p>
-        <p>Employee Name</p>
-        <input id="employeeName" type="text"/>
-        <button onclick="makePOSTRequest()">Post Request</button>
-        <p id="postResponse"></p>
+  </div>
 
->>>>>>> d9f0fb326c91e0b47ef590bfe7fdfda0e81ab805
 </body>
 
 </html>
