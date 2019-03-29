@@ -19,5 +19,8 @@ const EmployeeSchema = new Schema({
 
 
 const Employee = mongoose.model("employee", EmployeeSchema);
+<<<<<<< HEAD
+=======
 
 module.exports = Employee;
+>>>>>>> upstream/master
